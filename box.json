@@ -1,0 +1,10 @@
+{
+    "files": [
+	"classis/autoload.php",
+        "classis/Request.php",
+	"screen.php"
+    ],
+    "main": "screen.php",
+    "output": "srcphp.phar",
+    "stub": true
+}
