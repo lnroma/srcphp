@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?php
-require_once('./classis/autoload.php');
+require_once('classis/autoload.php');
 
 $request = new Request();
 
