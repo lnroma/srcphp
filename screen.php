@@ -14,14 +14,12 @@ $nameScreenshot = date('Y_m_d_G_i_s_') . 'screen.png';
 
 system('scrot -s /tmp/'.$nameScreenshot);
 
-//echo $request->getOauthLink().PHP_EOL;die;
 $result = $request
     ->setToken($config['token'])
     ->setFileNameOnDisk($nameScreenshot)
     ->setPathToFile('/tmp/'.$nameScreenshot)
     ->upload()
-    ->publicateFile()
-;
+    ->publicateFile();
 
 $url = $result['public_url'];
 

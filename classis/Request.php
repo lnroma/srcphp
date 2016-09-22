@@ -13,6 +13,7 @@ class Request
     private $_method = null;
     private $_filePath = null;
     private $_fileName = null;
+
     /**
      * get oauth link
      */
@@ -70,13 +71,6 @@ class Request
      */
     public function upload()
     {
-//       $result = file_get_contents(
-//           $this->_href,
-//           false,
-//           $this->_context($this->_method)
-//       );
-//
-//        var_dump($result);die;
         $ch = curl_init($this->_href);
 
         curl_setopt($ch,CURLOPT_HTTPHEADER,
@@ -95,6 +89,10 @@ class Request
         return $this;
     }
 
+    /**
+     * public file and get public url for screenshot
+     * @return mixed
+     */
     public function publicateFile()
     {
         /**
